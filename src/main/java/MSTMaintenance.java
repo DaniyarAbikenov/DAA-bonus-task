@@ -8,7 +8,6 @@ public class MSTMaintenance {
 
     public static Edge findReplacement(List<Edge> mst, Graph graph, Edge removed) {
 
-        // После удаления пересобираем DSU только по MST
         DSU dsu = new DSU(graph.n);
         for (Edge e : mst) {
             dsu.union(e.u, e.v);
